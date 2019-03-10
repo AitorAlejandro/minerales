@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Imanol Minerales</title>
+  <link rel="stylesheet" href="//unpkg.com/papercss@1.6.1/dist/paper.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="paper container" id="app">
+    <header>
+        <h1 class="site-title">Materiales</h1>
+        <p class="site-claim">Colección de materiales de Imanol.</p>
+    </header>
+    <hr>
+    <main>
+      <div class="search-box">
+        <div>
+          <label for="search">Filtrar</label>
+        </div>
+        <div>
+          <input type="text" v-model="filtro">
+        </div>
+      </div>
+      <div class="card" v-for="mineral in mineralesFiltrados">
+        <img :src="mineral.imgSrc" :alt="mineral.nombre">
+        <div class="card-body">
+          <h4 class="card-title">{{mineral.nombre}}</h4>
+          <p class="card-subtitle">{{mineral.procedencia}}</p>
+        </div>
+      </div>
+          
+    </main>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

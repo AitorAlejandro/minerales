@@ -1,0 +1,17 @@
+.site-title {
+  font-size: 3.2rem;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+.site-claim {
+  margin-top: 0;
+}
+.card {
+  margin-bottom: 1em;
+}
+.search-box {
+  margin-bottom: 1em;
+}
+.search-box input {
+  width: 100%;
+}
